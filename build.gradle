@@ -1,0 +1,38 @@
+git apply plugin: 'idea'
+apply plugin: 'java'
+
+idea {
+    project {
+        //Set specific jdk and language level
+        jdkName = '1.8'
+        languageLevel = '1.8'
+    }
+    module {
+        excludeDirs += file('build')
+        excludeDirs += file('gradle')
+        downloadSources = true
+    }
+}
+
+repositories {
+    // Central Repository
+    mavenCentral()
+
+    // Facultad de Ingeniería Repository
+    maven { url "https://dl.bintray.com/facultaddeingenieria/releases" }
+}
+
+dependencies {
+    /* Compile scope */
+
+    // https://mvnrepository.com/artifact/ar.edu.austral.fi.anaydis/anaydis-base
+    implementation 'ar.edu.austral.fi.anaydis:anaydis-base:1.3.8'
+    // https://mvnrepository.com/artifact/ar.edu.austral.fi.anaydis/anaydis-anim
+    implementation 'ar.edu.austral.fi.anaydis:anaydis-anim:1.3.8'
+    implementation 'junit:junit:4.12'
+
+    /* Test scope */
+
+    // https://mvnrepository.com/artifact/ar.edu.austral.fi.anaydis/anaydis-test
+    testImplementation 'ar.edu.austral.fi.anaydis:anaydis-test:1.3.8'
+}

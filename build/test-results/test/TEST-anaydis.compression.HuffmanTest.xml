@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="anaydis.compression.HuffmanTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-11-12T00:06:18" hostname="MacBook-Pro-de-Cata.local" time="0.056">
+  <properties/>
+  <testcase name="huffmanTest" classname="anaydis.compression.HuffmanTest" time="0.056"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
